@@ -10,16 +10,16 @@ app.get('/', (req, res) => {
 })
 
 //cors api
-app.get('/todays-price', (req, res) => {
-    // console.log('asdf');
-     fetch('https://nepse-data-api.herokuapp.com/data/todaysprice').then(res => res.json()).then(text => {
-         res.json(text);
-     }).catch(err => {
-         res.status(400).send('failed to fetch');
-     });
- });
+// app.get('/todays-price', (req, res) => {
+//     // console.log('asdf');
+//      fetch('https://nepse-data-api.herokuapp.com/data/todaysprice').then(res => res.json()).then(text => {
+//          res.json(text);
+//      }).catch(err => {
+//          res.status(400).send('failed to fetch');
+//      });
+//  });
  
 
 app.listen(port, () => {
-  console.log(`Server app listening at http://localhost:${port}`)
+  console.log(`Server app listening at ${port}`)
 })
